@@ -50,6 +50,7 @@ main {
     display: flex;
     gap: 0.75rem;
     align-items: flex-end;
+    width: 100%;
 }
 
 #question {
@@ -203,5 +204,58 @@ button[type="submit"]:disabled {
     }
     body {
         padding: 1rem;
+    }
+    .card {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0.75rem;
+    }
+    header {
+        margin-bottom: 1rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .input-group {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+    }
+    button[type="submit"] {
+        width: 100%;
+        padding: 0.75rem;
+    }
+    #question {
+        font-size: 16px;
+        min-height: 48px;
+        padding: 0.75rem;
+        width: 100%;
+    }
+    .responses {
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+    .card {
+        min-height: 180px;
+        border-radius: 12px;
+    }
+    .card-header {
+        padding: 0.625rem 0.75rem;
+    }
+    .card-body {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+    .model-icon {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+    .card-header h2 {
+        font-size: 0.85rem;
     }
 }
