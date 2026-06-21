@@ -150,6 +150,32 @@ button[type="submit"]:disabled {
     gap: 0.5rem;
     padding: 0.875rem 1rem;
     border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.toggle-arrow {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    transition: transform 0.2s;
+    margin-left: 0.25rem;
+}
+
+.card.collapsed .toggle-arrow {
+    transform: rotate(-90deg);
+}
+
+.card.collapsed .card-body {
+    display: none;
+}
+
+.card.collapsed {
+    min-height: auto;
+}
+
+.card.collapsed .card-header {
+    border-bottom: none;
 }
 
 .model-icon {

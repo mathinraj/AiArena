@@ -27,6 +27,7 @@ function resetCards() {
         bodies[model].textContent = '';
         statuses[model].textContent = '';
         cards[model].classList.remove('streaming');
+        cards[model].classList.remove('collapsed');
     }
 }
 
@@ -112,4 +113,11 @@ questionInput.addEventListener('keydown', (e) => {
         e.preventDefault();
         form.dispatchEvent(new Event('submit'));
     }
+});
+
+document.querySelectorAll('.card-header[data-toggle]').forEach(header => {
+    header.addEventListener('click', () => {
+        const card = header.closest('.card');
+        card.classList.toggle('collapsed');
+    });
 });
