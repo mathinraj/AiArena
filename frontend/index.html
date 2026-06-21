@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIArena</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>AIArena</h1>
+        <p class="subtitle">Ask once, compare many</p>
+    </header>
+
+    <main>
+        <form id="ask-form">
+            <div class="input-group">
+                <textarea id="question" placeholder="Ask anything..." rows="3" autofocus></textarea>
+                <button type="submit" id="submit-btn">
+                    <span class="btn-text">Ask All Models</span>
+                    <span class="btn-loading" hidden>
+                        <span class="spinner"></span> Streaming...
+                    </span>
+                </button>
+            </div>
+        </form>
+
+        <div class="responses" id="responses">
+            <div class="card" id="card-claude">
+                <div class="card-header">
+                    <span class="model-icon claude-icon">C</span>
+                    <h2>Claude</h2>
+                    <span class="status" id="status-claude"></span>
+                </div>
+                <div class="card-body" id="response-claude">
+                    <p class="placeholder-text">Response will appear here...</p>
+                </div>
+            </div>
+
+            <div class="card" id="card-groq">
+                <div class="card-header">
+                    <span class="model-icon groq-icon">L</span>
+                    <h2>Llama (Groq)</h2>
+                    <span class="status" id="status-groq"></span>
+                </div>
+                <div class="card-body" id="response-groq">
+                    <p class="placeholder-text">Response will appear here...</p>
+                </div>
+            </div>
+
+            <div class="card" id="card-gemini">
+                <div class="card-header">
+                    <span class="model-icon gemini-icon">G</span>
+                    <h2>Gemini</h2>
+                    <span class="status" id="status-gemini"></span>
+                </div>
+                <div class="card-body" id="response-gemini">
+                    <p class="placeholder-text">Response will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
